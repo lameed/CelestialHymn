@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Number:</strong>
+  <%= @hymn.number %>
+</p>
+
+<p>
+  <strong>Yoruba:</strong>
+  <%= @hymn.yoruba %>
+</p>
+
+<p>
+  <strong>English:</strong>
+  <%= @hymn.english %>
+</p>
+
+<%= link_to 'Edit', edit_hymn_path(@hymn) %> |
+<%= link_to 'Back', hymns_path %>

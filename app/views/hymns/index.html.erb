@@ -1,0 +1,31 @@
+<h1>Listing hymns</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Number</th>
+      <th>Yoruba</th>
+      <th>English</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @hymns.each do |hymn| %>
+      <tr>
+        <td><%= hymn.number %></td>
+        <td><%= hymn.yoruba %></td>
+        <td><%= hymn.english %></td>
+        <td><%= link_to 'Show', hymn %></td>
+        <td><%= link_to 'Edit', edit_hymn_path(hymn) %></td>
+        <td><%= link_to 'Destroy', hymn, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Hymn', new_hymn_path %>
