@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140214112727) do
+ActiveRecord::Schema.define(version: 20140219140758) do
 
   create_table "hymns", force: true do |t|
     t.string   "number"
-    t.string   "yoruba"
-    t.string   "english"
+    t.text     "yoruba"
+    t.text     "english"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
